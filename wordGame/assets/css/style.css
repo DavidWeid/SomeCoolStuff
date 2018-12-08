@@ -1,0 +1,48 @@
+html,
+body {
+    font-family: 'Bad Script', 'Marck Script', 'Tangerine', cursive, sans-serif;
+    font-size: 18px;
+}
+
+body {
+    background-image: url("../images/fresh-snow.png");
+}
+
+.redText {
+    color: crimson;
+}
+
+.largerFont {
+    font-size: 64px;
+}
+
+.mediumFont {
+    font-size: 40px;
+}
+
+#letters-guessed {
+    height: 65px;
+}
+
+#current-word {
+    height: 128px;
+}
+
+.invis {
+    opacity: 0;
+}
+
+.image-div {
+    position: relative;
+    overflow: hidden;
+}
+
+#image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 98%;
+    margin: auto;
+    height: 98%;
+    justify-content: center;
+}
