@@ -1,44 +1,19 @@
-var boatImg = $("#boat");
-var width = boatImg.get(0).width;
-var screenWidth = $(window).width();
-var duration = 5000;
+$(document).ready(function () {
+    $(".sidenav").sidenav();
 
-var cursorX;
-var cursorY;
+    $("#works-btn").on("click", function() {
+        $(".page-two").css("height", "100%");
+    });
 
-function getMouseLocation(e) {
-    cursorX = e.pageX;
-    cursorY = e.pageY;
-    console.log(cursorX);
-    console.log(cursorY);
-}
+    $("#works-btn-2").on("click", function() {
+        $(".page-two").css("height", "0%");
+    });
 
-function animateBoat() {
+    $("#contact-btn").on("click", function() {
+        $(".page-three").css("height", "100%");
+    });
 
-    boatImg.css("left", cursorX);
-    boatImg.css("top", cursorY);
-
-    boatImg.css("left", cursorX).animate( {
-        "left": screenWidth
-    }, duration, removeBoat);
-
-}
-
-function removeBoat() {
-    $("#boat").css("display", "none");
-}
-
-function returnBoat() {
-    $("#boat").css("visibility", "visible");
-    $("#boat").css("display", "unset");
-}
-
-$(document).on("click", function(e) {
-
-    returnBoat();
-    getMouseLocation(e);
-    animateBoat();
-
+    $("#contact-btn-3").on("click", function() {
+        $(".page-three").css("height", "0%");
+    })
 })
-
-// animateBoat();
